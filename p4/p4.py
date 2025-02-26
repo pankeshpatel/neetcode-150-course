@@ -29,18 +29,15 @@
 
 def construct_hashMap(str_element):
     charMap = {chr(i): 0 for i in range(ord("a"), ord("z"))}
+
     for index in range(len(str_element)):
         str_char = str_element[index]
         charMap[str_char] += 1
 
-    return "".join(map(str, charMap.values()))
+    return tuple(charMap.values())
 
 
 strs = ["act", "pots", "tops", "cat", "stop", "hat"]
-
-strs = ["ddddddddddg", "dgggggggggg"]
-
-# strs = ["bdddddddddd", "bbbbbbbbbbc"]
 
 
 # if len(strs) == 0:
