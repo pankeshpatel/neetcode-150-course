@@ -24,7 +24,7 @@ result = 0
 
 while l < r:
 
-    area = min(height[l], height[r]) * r - l
+    area = min(height[l], height[r]) * (r - l)
     result = max(result, area)
 
     if height[l] <= height[r]:
