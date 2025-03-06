@@ -37,6 +37,8 @@ keys = hashmap.keys()
 values = hashmap.values()
 ```
 
+# add, update, delete operations in hashMap
+
 
 # Python HashMap Libraries and APIs
 
