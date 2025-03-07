@@ -15,3 +15,16 @@
 # Input: nums = [-1]
 
 # Output: -1
+
+
+nums = [2, -3, 4, -2, 2, 1, -1, 4]
+currentSum = 0
+maxSum = 0
+
+for n in nums:
+    if currentSum < 0:
+        currentSum = 0
+    currentSum += n
+    maxSum = max(currentSum, maxSum)
+
+print(f"{maxSum}")
