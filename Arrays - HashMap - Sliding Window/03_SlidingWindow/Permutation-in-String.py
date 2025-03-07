@@ -19,6 +19,9 @@
 
 # Output: false
 
+# Resource:  Permutation in String
+# https://www.youtube.com/watch?v=VXewy91P0S4
+
 s1 = "ab"
 s2 = "lecabee"
 
