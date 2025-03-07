@@ -32,3 +32,30 @@
 # The result of the merge is [1].
 # Note that because m = 0, there are no elements in nums1. The 0 is only
 # there to ensure the merge result can fit in nums1.
+
+
+nums1 = [1, 2, 3, 0, 0, 0]
+nums2 = [-6, -5, -2]
+m = 3
+n = 3
+
+idx = m + n - 1
+i = m - 1
+j = n - 1
+
+while i >= 0 and j >= 0:
+    if nums1[i] >= nums2[j]:
+        nums1[idx] = nums1[i]
+        idx -= 1
+        i -= 1
+    else:
+        nums1[idx] = nums2[j]
+        j -= 1
+        idx -= 1
+
+while j >= 0:
+    nums1[idx] = nums2[j]
+    idx -= 1
+    j -= 1
+
+print(f"{nums1}")
