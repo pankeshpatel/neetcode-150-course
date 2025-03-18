@@ -2,6 +2,8 @@ Two Pointers in 7 minutes | LeetCode Pattern
 https://www.youtube.com/watch?v=QzZ7nmouLTI
 
 
+
+
 The Two Pointers pattern is a common technique in algorithmic problem-solving, 
 and you should consider applying it when a problem involves:
 

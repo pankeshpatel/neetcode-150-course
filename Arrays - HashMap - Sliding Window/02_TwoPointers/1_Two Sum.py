@@ -56,30 +56,45 @@ numbers = [1, 2, 3, 4]
 target = 7
 
 
-class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
+# class Solution:
+#     def twoSum(self, nums: List[int], target: int) -> List[int]:
 
-        hashmap: dict[int, int] = {}
-        index_1 = -1
-        index_2 = -1
+#         hashmap: dict[int, int] = {}
+#         index_1 = -1
+#         index_2 = -1
 
-        # for index in range(len(nums)):  # O(n)
-        #     remaining_element = target - nums[index]
-        #     number = nums[index]
-        #     if remaining_element in hashmap:
-        #         index_1 = hashmap[remaining_element]
-        #         index_2 = index
-        #     else:
-        #         hashmap[number] = index
+#         # for index in range(len(nums)):  # O(n)
+#         #     remaining_element = target - nums[index]
+#         #     number = nums[index]
+#         #     if remaining_element in hashmap:
+#         #         index_1 = hashmap[remaining_element]
+#         #         index_2 = index
+#         #     else:
+#         #         hashmap[number] = index
 
-        # return [index_1, index_2]
+#         # return [index_1, index_2]
 
-        for index, number in enumerate(nums):
-            remaining_element = target - number
-            if remaining_element in hashmap:
-                index_1 = hashmap[remaining_element]
-                index_2 = index
-            else:
-                hashmap[number] = index
+#         for index, number in enumerate(nums):
+#             remaining_element = target - number
+#             if remaining_element in hashmap:
+#                 index_1 = hashmap[remaining_element]
+#                 index_2 = index
+#             else:
+#                 hashmap[number] = index
 
-        return [index_1, index_2]
+#         return [index_1, index_2]
+
+from typing import List
+
+
+def pair_sum_sorted(nums: List[int], target: int) -> List[int]:
+
+    index_map = {}
+
+    for index, num in enumerate(nums):
+        value = target - num
+        if value in index_map:
+            return [index, index_map[value]]
+        index_map[num] = index
+
+    return []

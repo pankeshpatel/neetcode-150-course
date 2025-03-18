@@ -17,3 +17,8 @@ A problem that falls into the Binary Search category typically has the following
 
 - There should be a clear rule that `decides whether to move to the left half` or the `right half of the search space`.
 - Example: In a guessing game, where if your guess is too low, you are told to "guess higher".
+
+
+# Single-Peak or Ordered Property
+- Problems where values increase up to a peak and then decrease (e.g., mountain arrays, bitonic sequences).
+- Example: Finding the peak element in a mountain array.
